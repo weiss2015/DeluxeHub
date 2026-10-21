@@ -1,13 +1,13 @@
 package net.zithium.deluxehub.module.modules.world;
 
 import com.cryptomorin.xseries.XMaterial;
-import de.tr7zw.changeme.nbtapi.NBTItem;
 import net.zithium.deluxehub.DeluxeHubPlugin;
 import net.zithium.deluxehub.Permissions;
 import net.zithium.deluxehub.config.ConfigType;
 import net.zithium.deluxehub.config.Messages;
 import net.zithium.deluxehub.cooldown.CooldownType;
 import net.zithium.deluxehub.module.Module;
+import net.zithium.deluxehub.module.modules.hotbar.HotbarTag;
 import net.zithium.deluxehub.module.ModuleType;
 import net.zithium.deluxehub.module.modules.hologram.Hologram;
 import net.zithium.deluxehub.utility.TeleportUtil;
@@ -192,7 +192,7 @@ public class WorldProtect extends Module {
             return;
         }
 
-        if (new NBTItem(event.getItemInHand()).hasKey("hotbarItem")) {
+        if (HotbarTag.has(event.getItemInHand())) {
             event.setCancelled(true);
             return;
         }

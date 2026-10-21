@@ -27,7 +27,6 @@ dependencies {
         exclude(group = "org.bukkit", module = "bukkit")
     }
     implementation("com.tcoded:FoliaLib:0.5.2")
-    implementation("de.tr7zw:item-nbt-api:2.16.1") // UPDATE THIS FOR EACH NEW MC VERSION
     implementation("org.bstats:bstats-bukkit-lite:1.8")
     implementation("com.github.shynixn.headdatabase:hdb-api:1.0")
     implementation("com.github.ItzSave:ZithiumLibrary:2.1.1") {
@@ -68,7 +67,6 @@ tasks {
         relocate("org.bstats", "net.zithium.deluxehub.libs.metrics")
         relocate("cl.bgmp", "net.zithium.deluxehub.libs.command")
         relocate("com.tcoded.folialib", "net.zithium.deluxehub.libs.folialib")
-        relocate("de.tr7zw.changeme.nbtapi", "net.zithium.deluxehub.libs.nbt")
         relocate("net.zithium.library", "net.zithium.deluxehub.libs.library")
         relocate("com.cryptomorin.xseries", "net.zithium.deluxehub.libs.xseries")
     }

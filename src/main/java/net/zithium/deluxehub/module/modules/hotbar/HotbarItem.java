@@ -3,7 +3,6 @@ package net.zithium.deluxehub.module.modules.hotbar;
 import com.cryptomorin.xseries.XMaterial;
 import com.cryptomorin.xseries.reflection.XReflection;
 import com.tcoded.folialib.impl.PlatformScheduler;
-import de.tr7zw.changeme.nbtapi.NBTItem;
 import net.zithium.deluxehub.DeluxeHubPlugin;
 import net.zithium.deluxehub.utility.ItemStackBuilder;
 import org.bukkit.Material;
@@ -40,9 +39,7 @@ public abstract class HotbarItem implements Listener {
         this.key = key;
         this.slot = slot;
 
-        NBTItem nbtItem = new NBTItem(item);
-        nbtItem.setString("hotbarItem", key);
-        this.item = nbtItem.getItem();
+        this.item = HotbarTag.tag(item, key);
     }
 
     public DeluxeHubPlugin getPlugin() {
@@ -104,7 +101,7 @@ public abstract class HotbarItem implements Listener {
         PlayerInventory inventory = player.getInventory();
         ItemStack item = inventory.getItem(slot);
 
-        if (item != null && new NBTItem(item).getString("hotbarItem").equals(key)) {
+        if (item != null && HotbarTag.is(item, key)) {
             inventory.remove(inventory.getItem(slot));
         }
     }
@@ -125,7 +122,7 @@ public abstract class HotbarItem implements Listener {
             return;
         }
 
-        if (event.getSlot() == slot && new NBTItem(clicked).getString("hotbarItem").equals(key)) {
+        if (event.getSlot() == slot && HotbarTag.is(clicked, key)) {
             event.setCancelled(true);
         }
     }
@@ -144,7 +141,7 @@ public abstract class HotbarItem implements Listener {
             return;
         } else if (item.getType() == Material.AIR) {
             return;
-        } else if (!new NBTItem(item).getString("hotbarItem").equals(key)) {
+        } else if (!HotbarTag.is(item, key)) {
             return;
         }
 

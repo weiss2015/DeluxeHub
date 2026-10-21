@@ -1,13 +1,13 @@
 package net.zithium.deluxehub.module.modules.hotbar.items;
 
 import com.tcoded.folialib.impl.PlatformScheduler;
-import de.tr7zw.changeme.nbtapi.NBTItem;
 import net.zithium.deluxehub.DeluxeHubPlugin;
 import net.zithium.deluxehub.config.ConfigType;
 import net.zithium.deluxehub.config.Messages;
 import net.zithium.deluxehub.cooldown.CooldownType;
 import net.zithium.deluxehub.module.modules.hotbar.HotbarItem;
 import net.zithium.deluxehub.module.modules.hotbar.HotbarManager;
+import net.zithium.deluxehub.module.modules.hotbar.HotbarTag;
 import net.zithium.deluxehub.utility.ItemStackBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -35,9 +35,7 @@ public class PlayerHider extends HotbarItem {
         super(hotbarManager, item, slot, key);
         hidden = new CopyOnWriteArrayList<>();
         FileConfiguration config = getHotbarManager().getConfig(ConfigType.SETTINGS);
-        NBTItem nbtItem = new NBTItem(ItemStackBuilder.getItemStack(config.getConfigurationSection("player_hider.hidden")).build());
-        nbtItem.setString("hotbarItem", key);
-        hiddenItem = nbtItem.getItem();
+        hiddenItem = HotbarTag.tag(ItemStackBuilder.getItemStack(config.getConfigurationSection("player_hider.hidden")).build(), key);
         cooldown = config.getInt("player_hider.cooldown");
     }
 

@@ -7,7 +7,6 @@ import cl.bgmp.minecraft.util.commands.exceptions.MissingNestedCommandException;
 import cl.bgmp.minecraft.util.commands.exceptions.WrappedCommandException;
 import com.tcoded.folialib.FoliaLib;
 import com.tcoded.folialib.impl.PlatformScheduler;
-import de.tr7zw.changeme.nbtapi.utils.MinecraftVersion;
 import net.zithium.deluxehub.action.ActionManager;
 import net.zithium.deluxehub.command.CommandManager;
 import net.zithium.deluxehub.config.ConfigManager;
@@ -68,8 +67,6 @@ public class DeluxeHubPlugin extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
-
-        MinecraftVersion.disableUpdateCheck();
 
         // Initialize Folia scheduling (if needed)
         FoliaLib foliaLib = new FoliaLib(this);
