@@ -7,7 +7,7 @@ import net.zithium.deluxehub.module.Module;
 import net.zithium.deluxehub.module.ModuleType;
 import net.zithium.deluxehub.utility.PlaceholderUtil;
 import net.zithium.deluxehub.utility.TextUtil;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.attribute.Attribute;

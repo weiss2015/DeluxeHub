@@ -1,7 +1,7 @@
 package net.zithium.deluxehub.config;
 
 import net.zithium.deluxehub.utility.TextUtil;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 

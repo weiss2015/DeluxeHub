@@ -19,7 +19,7 @@ import net.zithium.deluxehub.module.ModuleManager;
 import net.zithium.deluxehub.module.ModuleType;
 import net.zithium.deluxehub.module.modules.hologram.HologramManager;
 import net.zithium.deluxehub.utility.UpdateChecker;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bstats.bukkit.MetricsLite;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.HandlerList;

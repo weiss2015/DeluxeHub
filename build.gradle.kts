@@ -29,10 +29,6 @@ dependencies {
     implementation("com.tcoded:FoliaLib:0.5.2")
     implementation("org.bstats:bstats-bukkit-lite:1.8")
     implementation("com.github.shynixn.headdatabase:hdb-api:1.0")
-    implementation("com.github.ItzSave:ZithiumLibrary:2.1.1") {
-        // Paper provides Adventure; bundling or relocating it breaks Paper API calls
-        exclude(group = "net.kyori")
-    }
 
     compileOnly("io.papermc.paper:paper-api:26.3-rc-3.build.1-alpha")
     compileOnly("net.md-5:bungeecord-chat:1.21-R0.4")
@@ -67,7 +63,6 @@ tasks {
         relocate("org.bstats", "net.zithium.deluxehub.libs.metrics")
         relocate("cl.bgmp", "net.zithium.deluxehub.libs.command")
         relocate("com.tcoded.folialib", "net.zithium.deluxehub.libs.folialib")
-        relocate("net.zithium.library", "net.zithium.deluxehub.libs.library")
         relocate("com.cryptomorin.xseries", "net.zithium.deluxehub.libs.xseries")
     }
 }

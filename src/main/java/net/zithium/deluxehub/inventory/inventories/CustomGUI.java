@@ -5,7 +5,7 @@ import net.zithium.deluxehub.inventory.AbstractInventory;
 import net.zithium.deluxehub.inventory.InventoryBuilder;
 import net.zithium.deluxehub.inventory.InventoryItem;
 import net.zithium.deluxehub.utility.ItemStackBuilder;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.Inventory;
 

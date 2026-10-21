@@ -4,7 +4,7 @@ import com.tcoded.folialib.impl.PlatformScheduler;
 import net.zithium.deluxehub.DeluxeHubPlugin;
 import net.zithium.deluxehub.utility.TeleportUtil;
 import net.zithium.deluxehub.utility.reflection.ArmorStandName;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;

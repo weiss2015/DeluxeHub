@@ -17,7 +17,7 @@ import net.zithium.deluxehub.module.modules.hotbar.HotbarManager;
 import net.zithium.deluxehub.module.modules.visual.scoreboard.ScoreboardManager;
 import net.zithium.deluxehub.module.modules.world.LobbySpawn;
 import net.zithium.deluxehub.utility.TextUtil;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

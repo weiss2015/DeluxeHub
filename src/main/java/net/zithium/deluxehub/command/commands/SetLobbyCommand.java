@@ -8,7 +8,7 @@ import net.zithium.deluxehub.Permissions;
 import net.zithium.deluxehub.config.Messages;
 import net.zithium.deluxehub.module.ModuleType;
 import net.zithium.deluxehub.module.modules.world.LobbySpawn;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

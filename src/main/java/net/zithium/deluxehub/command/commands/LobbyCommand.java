@@ -7,7 +7,7 @@ import net.zithium.deluxehub.DeluxeHubPlugin;
 import net.zithium.deluxehub.module.ModuleType;
 import net.zithium.deluxehub.module.modules.world.LobbySpawn;
 import net.zithium.deluxehub.utility.TeleportUtil;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

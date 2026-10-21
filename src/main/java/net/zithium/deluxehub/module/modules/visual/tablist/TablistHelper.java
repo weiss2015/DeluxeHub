@@ -2,7 +2,7 @@ package net.zithium.deluxehub.module.modules.visual.tablist;
 
 import com.google.common.base.Strings;
 import net.zithium.deluxehub.DeluxeHubPlugin;
-import net.zithium.library.utils.ColorUtil;
+import net.zithium.deluxehub.utility.ColorUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
