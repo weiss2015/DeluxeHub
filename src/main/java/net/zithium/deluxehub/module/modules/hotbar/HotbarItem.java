@@ -167,7 +167,7 @@ public abstract class HotbarItem implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void hotbarWorldChange(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
-        scheduler.runLater(task -> {
+        scheduler.runAtEntityLater(player, task -> {
             if (getHotbarManager().inDisabledWorld(player.getLocation())) {
                 removeItem(player);
             } else {

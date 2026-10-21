@@ -32,7 +32,7 @@ public class DelayAction implements Action {
 
         String remainingAction = parts[1].trim();
 
-        plugin.getServer().getScheduler().runTaskLater(plugin, () -> {
+        DeluxeHubPlugin.scheduler().runAtEntityLater(player, () -> {
             String actionName = StringUtils.substringBetween(remainingAction, "[", "]");
             Action action = actionName == null ? null : plugin.getActionManager().getAction(actionName.toUpperCase());
 

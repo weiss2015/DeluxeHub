@@ -120,7 +120,7 @@ public class PlayerListener extends Module {
             player.getInventory().clear();
         }
 
-        scheduler.runLater(task -> {
+        scheduler.runAtEntityLater(player, task -> {
             // Join events
             executeActions(player, joinActions);
 
